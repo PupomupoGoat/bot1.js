@@ -52,7 +52,7 @@ checkNetworkConnection().then(isConnected => {
       console.log('Presence update detected');  // Debugging log
 
       // Define the tracked user IDs
-      const trackedUserIds = ['856280684476629063', '637527706803896340'];  // Replace with actual user IDs
+      const trackedUserIds = ['856280684476629063', '637527706803896340', '707666763965399102'];  // Replace with actual user IDs
 
       // Check if the updated user's ID matches either of the two tracked user IDs
       if (trackedUserIds.includes(newPresence.user.id)) {
@@ -64,7 +64,7 @@ checkNetworkConnection().then(isConnected => {
           console.log(`${user.tag} is now ${status}`);
 
           // Send the status change message to a specific channel (replace YOUR_CHANNEL_ID)
-          const channel = client.channels.cache.get('YOUR_CHANNEL_ID'); // Replace with actual channel ID
+          const channel = client.channels.cache.get('762025766497812511'); // Replace with actual channel ID
           if (channel) {
             channel.send(`${user.tag} is now ${status}`);
           }
